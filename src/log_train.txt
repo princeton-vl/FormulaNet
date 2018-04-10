@@ -1,0 +1,52 @@
+[32m[I0910 20:54:20 45153 __main__:main:171][0m 
+Parameter setting:
+nFeats: 256
+nSteps: 3
+learning_rate: 0.001
+min_lr: 2e-05
+log: ../logs/log_bi_s3_uc.txt
+output: ../models/model_bi_s3_uc
+data_path: /home/mzwang/holselect/nips_model/data/hol_data/
+dict_file: ../data/dicts/hol_train_dict
+observe: 20000
+max_pair: 40000
+epoch: 5
+optim: rmsprop
+voting: False
+check_num: 950000
+module_depth: 2
+bias: False
+uncondition: True
+block: normal
+add_conj: False
+short_cut: True
+direction: False
+record: ../logs/record_bi_s3_uc
+loss: concat
+worker: 5
+binary: True
+epoch_len: 1900000
+norename: False
+fabelian: False
+loss_layers: None
+dropout: 0
+no_step_supervision: False
+cond_short_cut: False
+tied_weight: False
+compatible: False
+resume: None
+resume_only_net: False
+fix_net: False
+unfix_net_after: None
+train_file: /home/mzwang/holselect/nips_model/data/hol_data/train
+test_file: /home/mzwang/holselect/nips_model/data/hol_data/valid
+loss_step: 4
+
+[31m[W0910 20:54:25 45153 __main__:main:214][0m Training begins
+[32m[I0910 20:54:30 45334 worker0:worker:683][0m Here I am
+[32m[I0910 20:54:30 45337 worker3:worker:683][0m Here I am
+[32m[I0910 20:54:30 45335 worker1:worker:683][0m Here I am
+[32m[I0910 20:54:30 45339 worker4:worker:683][0m Here I am
+[32m[I0910 20:54:30 45336 worker2:worker:683][0m Here I am
+[32m[I0910 20:59:26 45153 __main__:train:599][0m Epoch: 0 Iteration: 20371 Loss: 0.02486 perTime: 0.015
+[32m[I0910 20:59:26 45153 __main__:train:606][0m acc 0: 0.67572 acc 1: 0.69167 acc 2: 0.70993 acc 3: 0.70811

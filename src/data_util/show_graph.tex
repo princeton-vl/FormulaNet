@@ -1,0 +1,66 @@
+\documentclass[letter,10pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{latexsym}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes,graphs,graphdrawing,quotes,arrows}
+\usegdlibrary{force, layered, trees}
+\tikzset{>=latex}
+\usepackage{enumerate}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage[pdftex]{hyperref}
+\newtheorem{lemma}{Lemma}
+
+%New commands
+\newcommand{\ud}{\,\mathrm{d}}
+\newcommand{\la}{\Rightarrow}
+\newcommand{\lr}{\Longleftrightarrow}
+\newcommand{\rfe}[1]{(\ref{eqn:#1})}
+
+\begin{document}
+\title{\textbf{Show Me the Graph! --- Automatic Graph Generator}}
+\author{Larry Yihe Tang}
+\date{\today}
+\maketitle
+
+
+% Use tree layout for trees.
+\[ \begin{tikzpicture}
+\graph[nodes={draw,circle}, layered layout, node distance=2.5cm]  {
+
+% Paste generated code below this line.
+"/\textbackslash:c0" -> {"=:c1","=:c8"},
+"=:c1" -> {"mapAt:c2","xs7"[rectangle]},
+"mapAt:c2" -> {"NIL:c3","f5"[rectangle],"xs7"[rectangle]},
+"NIL:c3" -> {},
+"!!4"[diamond] -> {"/\textbackslash:c0","f20\#F"[rectangle],"f5"[rectangle]},
+"f5"[rectangle] -> {},
+"!!6"[diamond] -> {"!!4"[diamond],"xs7"[rectangle]},
+"xs7"[rectangle] -> {},
+"=:c8" -> {"mapAt:c9","COND:c15"},
+"mapAt:c9" -> {"CONS:c10","f5"[rectangle],"xs7"[rectangle]},
+"CONS:c10" -> {"n12"[rectangle],"ns14"[rectangle]},
+"!!11"[diamond] -> {"!!6"[diamond],"n12"[rectangle]},
+"n12"[rectangle] -> {},
+"!!13"[diamond] -> {"!!11"[diamond],"ns14"[rectangle]},
+"ns14"[rectangle] -> {},
+"COND:c15" -> {"$<$:c16","mapAt:c18","mapAt:c22"},
+"$<$:c16" -> {"n12"[rectangle],"LENGTH:c17"},
+"LENGTH:c17" -> {"xs7"[rectangle]},
+"mapAt:c18" -> {"ns14"[rectangle],"f5"[rectangle],"list\_update:c19"},
+"list\_update:c19" -> {"xs7"[rectangle],"n12"[rectangle],"f20\#F"[rectangle]},
+"f20\#F"[rectangle] -> {"\#!\#:c21"},
+"\#!\#:c21" -> {"xs7"[rectangle],"n12"[rectangle]},
+"mapAt:c22" -> {"ns14"[rectangle],"f5"[rectangle],"xs7"[rectangle]},
+"$\mid$-:c23" -> {"!!13"[diamond]},
+% Paste generated code above this line.
+
+};
+\end{tikzpicture} \]
+
+
+\end{document}
